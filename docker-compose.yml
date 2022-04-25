@@ -1,0 +1,64 @@
+version: '2'
+services:
+  db:
+    image: "postgres:12.0"
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 9001:5432
+  odoo11:
+    image: "odoo:11.0"
+    container_name: "t11"
+    depends_on:
+      - db
+    ports:
+      - 9011:8069
+    volumes:
+      - odoo-data11:/var/lib/odoo
+  odoo12:
+    image: "odoo:12.0"
+    container_name: "t12"
+    depends_on:
+      - db
+    ports:
+      - 9012:8069
+    volumes:
+      - odoo-data12:/var/lib/odoo
+  odoo13:
+    image: "odoo:13.0"
+    container_name: "t13"
+    depends_on:
+      - db
+    ports:
+      - 9013:8069
+    volumes:
+      - odoo-data13:/var/lib/odoo
+  odoo14:
+    image: "odoo:14.0"
+    container_name: "t14"
+    depends_on:
+      - db
+    ports:
+      - 9014:8069
+    volumes:
+      - odoo-data14:/var/lib/odoo
+  odoo15:
+    image: "odoo:15.0"
+    container_name: "t15"
+    depends_on:
+      - db
+    ports:
+      - 9015:8069
+    volumes:
+      - odoo-data15:/var/lib/odoo
+volumes:
+  db-data:
+  odoo-data11:
+  odoo-data12:
+  odoo-data13:
+  odoo-data14:
+  odoo-data15:

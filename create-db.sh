@@ -1,0 +1,5 @@
+docker exec -it t11 odoo -c /etc/odoo/odoo.conf -d o_11 -i l10n_generic_coa,purchase,account,stock --without-demo=all --no-http --stop-after-init --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo
+docker exec -it t12 odoo -c /etc/odoo/odoo.conf -d o_12 -i l10n_generic_coa,purchase,account,stock --without-demo=all --no-http --stop-after-init --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo
+docker exec -it t13 odoo -c /etc/odoo/odoo.conf -d o_13 -i l10n_generic_coa,purchase,account,stock --without-demo=all --no-http --stop-after-init --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo
+docker exec -it t14 odoo -c /etc/odoo/odoo.conf -d o_14 -i l10n_generic_coa,purchase,account,stock --without-demo=all --no-http --stop-after-init --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo
+docker exec -it t15 odoo -c /etc/odoo/odoo.conf -d o_15 -i l10n_generic_coa,purchase,account,stock --without-demo=all --no-http --stop-after-init --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo
